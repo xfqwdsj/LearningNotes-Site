@@ -1,0 +1,7 @@
+baseURL: https://learning.ltfan.top/
+languageCode: zh-cn
+title: Learning Notes
+
+module:
+  imports:
+    - path: github.com/imfing/hextra
