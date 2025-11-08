@@ -16,6 +16,6 @@ markup:
           inline: [['\(', '\)'], ["$", "$"]]
         enable: true
 
-params:
-  math:
-    engine: mathjax
+# params:
+#   math:
+#     engine: mathjax
