@@ -14,3 +14,7 @@ markup:
           block: [['\[', '\]'], ["$$", "$$"]]
           inline: [['\(', '\)'], ["$", "$"]]
         enable: true
+
+params:
+  math:
+    engine: mathjax
