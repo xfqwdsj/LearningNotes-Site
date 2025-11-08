@@ -1,5 +1,6 @@
 baseURL: https://learning.ltfan.top/
 languageCode: zh-cn
+defaultContentLanguage: zh-cn
 title: Learning Notes
 
 module:
