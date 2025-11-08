@@ -46,11 +46,14 @@ jobs:
         id: pages
         uses: actions/configure-pages@v5
 
-      - name: 编译Hugo
+      - name: 设置Hugo
         uses: peaceiris/actions-hugo@v3
         with:
           hugo-version: "latest"
           extended: true
+
+      - name: 构建网站
+        run: hugo --minify
 
       - name: 上传产物
         uses: actions/upload-pages-artifact@v3
