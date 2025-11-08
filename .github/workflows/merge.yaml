@@ -37,6 +37,7 @@ jobs:
           git checkout --orphan merged
           rm -rf .github
           rm -rf content/.git
+          rm -rf content/.github
           git add .
           git commit -m "Merge content from xfqwdsj/LearningNotes at ${{ github.event.inputs.sha }} [skip ci]"
           git push -f origin merged
