@@ -59,7 +59,8 @@ jobs:
           hugo-version: "latest"
           extended: true
 
-      - uses: actions/cache@v4
+      - name: 设置缓存
+        uses: actions/cache@v4
         with:
           path: ${{ env.HUGO_CACHEDIR }}
           key: ${{ runner.os }}-hugomod-${{ hashFiles('**/go.sum') }}
