@@ -10,11 +10,13 @@ on:
 jobs:
   merge:
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
     steps:
       - name: 显示信息
         run: |
           echo "内容源码SHA: ${{ github.event.inputs.sha }}"
-      
+
       - name: 提取
         uses: actions/checkout@v4
         with:
