@@ -51,9 +51,6 @@ jobs:
         with:
           hugo-version: "latest"
           extended: true
-          source-dir: ./
-          destination-dir: ./public
-          args: --minify
 
       - name: 上传产物
         uses: actions/upload-pages-artifact@v3
