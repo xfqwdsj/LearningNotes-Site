@@ -1,4 +1,4 @@
-name: 合并网站
+name: 合并与部署网站
 
 on:
   workflow_dispatch:
@@ -10,6 +10,8 @@ on:
 jobs:
   merge:
     runs-on: ubuntu-latest
+    env:
+      HUGO_CACHEDIR: /tmp/hugo_cache
     permissions:
       contents: write
       pages: write
@@ -53,6 +55,13 @@ jobs:
         with:
           hugo-version: "latest"
           extended: true
+
+      - uses: actions/cache@v4
+        with:
+          path: ${{ env.HUGO_CACHEDIR }}
+          key: ${{ runner.os }}-hugomod-${{ hashFiles('**/go.sum') }}
+          restore-keys: |
+            ${{ runner.os }}-hugomod-
 
       - name: 构建网站
         run: hugo --minify
