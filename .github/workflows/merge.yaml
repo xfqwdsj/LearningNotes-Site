@@ -14,6 +14,11 @@ jobs:
       - name: 显示信息
         run: |
           echo "内容源码SHA: ${{ github.event.inputs.sha }}"
+      
+      - name: 提取
+        uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
 
       - name: 提取内容源码
         uses: actions/checkout@v4
@@ -24,15 +29,12 @@ jobs:
           path: content
 
       - name: 强制推送到本仓库merged分支
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
-          git init
-          git remote add origin https://github.com/xfqwdsj/LearningNotes-Site.git
           git config --global user.name "github-actions[bot]"
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
           git checkout --orphan merged
           rm -rf .github
+          rm -rf content/.git
           git add .
           git commit -m "Merge content from xfqwdsj/LearningNotes at ${{ github.event.inputs.sha }} [skip ci]"
           git push -f origin merged
