@@ -16,6 +16,8 @@ markup:
           inline: [['\(', '\)'], ["$", "$"]]
         enable: true
 
-# params:
-#   math:
-#     engine: mathjax
+menu:
+  main:
+    - name: 搜索
+      params:
+        type: search
