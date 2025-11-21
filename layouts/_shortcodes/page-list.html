@@ -1,0 +1,12 @@
+{{- $cards := "" -}}
+
+{{- range .Page.CurrentSection.Pages -}}
+  {{- if (ne .RelPermalink $.Page.RelPermalink) -}}
+    {{- $cards = printf "%s{{< card link=\"%s\" title=\"%s\" >}}" $cards .RelPermalink .Title -}}
+  {{- end -}}
+{{- end -}}
+
+{{- if ne $cards "" -}}
+  {{- $cards = printf "{{< cards >}}%s{{</ cards >}}" $cards -}}
+  {{ .Page.RenderString $cards | safeHTML -}}
+{{- end -}}
