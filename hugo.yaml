@@ -12,8 +12,8 @@ markup:
     extensions:
       passthrough:
         delimiters:
-          block: [['\[', '\]'], ["$$", "$$"]]
-          inline: [['\(', '\)'], ["$", "$"]]
+          block: [ [ '\[', '\]' ], [ "$$", "$$" ] ]
+          inline: [ [ '\(', '\)' ], [ "$", "$" ] ]
         enable: true
 
 menu:
@@ -21,3 +21,8 @@ menu:
     - name: 搜索
       params:
         type: search
+
+params:
+  editURL:
+    enable: true
+    base: https://github.com/xfqwdsj/LearningNotes/blob/main
