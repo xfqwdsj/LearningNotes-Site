@@ -8,3 +8,7 @@
 .content h4 {
     font-family: "Noto Serif", "Noto Serif SC", serif;
 }
+
+.katex-display {
+    overflow-x: auto;
+}
