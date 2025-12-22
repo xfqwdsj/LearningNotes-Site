@@ -23,6 +23,15 @@ menu:
         type: search
 
 params:
+  theme:
+    default: system
+    displayToggle: true
+
   editURL:
     enable: true
     base: https://github.com/xfqwdsj/LearningNotes/blob/main
+
+  highlight:
+    copy:
+      enable: true
+      display: always
