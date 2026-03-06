@@ -22,6 +22,10 @@ menu:
       params:
         type: search
 
+outputs:
+  page: [html, markdown]
+  section: [html, rss, markdown]
+
 params:
   theme:
     default: system
@@ -35,3 +39,10 @@ params:
     copy:
       enable: true
       display: always
+
+  page:
+    contextMenu:
+      enable: true
+
+  imageZoom:
+    enable: true
