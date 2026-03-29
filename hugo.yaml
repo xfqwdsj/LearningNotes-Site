@@ -46,3 +46,10 @@ params:
 
   imageZoom:
     enable: true
+
+  blog:
+    list:
+      displayTags: true
+
+  toc:
+    displayTags: true
