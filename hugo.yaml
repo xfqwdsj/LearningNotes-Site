@@ -8,6 +8,8 @@ module:
     - path: github.com/imfing/hextra
 
 markup:
+  highlight:
+    noClasses: false
   goldmark:
     extensions:
       passthrough:
