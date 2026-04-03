@@ -20,7 +20,12 @@ markup:
 
 menu:
   main:
+    - identifier: content
+      name: Notes
+      pageRef: /
+      weight: 1
     - name: 搜索
+      weight: 2
       params:
         type: search
 
