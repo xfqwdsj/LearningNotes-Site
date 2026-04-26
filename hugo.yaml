@@ -1,0 +1,62 @@
+baseURL: https://learning.ltfan.top/
+languageCode: zh-cn
+defaultContentLanguage: zh-cn
+title: Learning Notes
+
+module:
+  imports:
+    - path: github.com/imfing/hextra
+
+markup:
+  highlight:
+    noClasses: false
+  goldmark:
+    extensions:
+      passthrough:
+        delimiters:
+          block: [ [ '\[', '\]' ], [ "$$", "$$" ] ]
+          inline: [ [ '\(', '\)' ], [ "$", "$" ] ]
+        enable: true
+
+menu:
+  main:
+    - identifier: content
+      name: Notes
+      pageRef: /
+      weight: 1
+    - name: 搜索
+      weight: 2
+      params:
+        type: search
+
+outputs:
+  page: [html, markdown]
+  section: [html, rss, markdown]
+
+params:
+  theme:
+    default: system
+    displayToggle: true
+
+  editURL:
+    enable: true
+    base: https://github.com/xfqwdsj/LearningNotes/blob/main
+
+  highlight:
+    copy:
+      enable: true
+      display: always
+
+  page:
+    contextMenu:
+      enable: true
+
+  imageZoom:
+    enable: true
+
+  blog:
+    list:
+      displayTags: true
+
+  toc:
+    displayTags: true
